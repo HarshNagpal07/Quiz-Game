@@ -95,3 +95,22 @@ body{
     transition: width 0.3s ease;
 }
 
+#result-screen-info{
+    background-color: #f8f0e5;
+    background-repeat: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.resutl-info p{
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+#result-message{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e86a33;
+}
+button{
+    
+}
