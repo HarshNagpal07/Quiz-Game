@@ -62,3 +62,49 @@ const quizQuestions = [
     ],
   },
 ];
+
+//Quiz State Vars
+let currentQuestionIndex =0;
+let score = 0;
+let answersDisabled =false;
+
+totalQuestionsSpan.textContent = quizQuestions.length;
+maxScoreSpan.textContent = quizQuestions.length;
+
+//Event Listeners
+startButton.addEventListener("click", startQuiz)
+restartButton.addEventListener("click", restartQuiz)
+
+function startQuiz(){
+    //reset vars
+    // console.log("quiz started");
+    currentQuestionIndex = 0;
+    score = 0;
+    scoreSpan.textContent = score;
+
+    startScreen.classList.remove("active");
+    quizScreen.classList.add("active");
+
+    showQuestion()
+}
+
+function showQuestion(){
+    //reset state
+    answersDisabled = false
+
+    const currentQuestion = quizQuestions[currentQuestionIndex]
+
+    currentQuestionSpan.textContent = currentQuestionIndex + 1
+
+    const progressPercent = (currentQuestionIndex / quizQuestions.length) * 100;
+    progressBar.style.width = progressPercent + "%"
+
+    questionText.textContent = currentQuestion.question
+
+    //todo: explain this in a second
+    answersContainer.innerHTML = "";
+}
+
+function restartQuiz(){
+    console.log("quiz re-started")
+}
