@@ -103,6 +103,15 @@ function showQuestion(){
 
     //todo: explain this in a second
     answersContainer.innerHTML = "";
+
+    currentQuestion.answers.forEach(answer =>{
+        const button =document.createElement("button")
+        button.textContent = answer.text
+        button.classList.add("answer-btn")
+        
+        // Dataset=Its a property of the button element that allows you to store custom data
+        button.dataset.correct = answer.correct
+    })
 }
 
 function restartQuiz(){
