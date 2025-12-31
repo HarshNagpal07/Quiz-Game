@@ -119,7 +119,26 @@ function showQuestion(){
 }
 
 function selectAnswer(event){
-  
+  //optimization check
+  if(answersDisabled) return 
+
+  answersContainer =true;
+
+  const selectedButton = event.target;
+  const isCorrect = selectedButton.dataset.correct === "true";
+
+  Array.from(answersContainer.children).forEach(button => {
+    if(button.dataset.correct === "true"){
+      button.classList.add("correct")
+      button.classList.add("correct")
+    } else{
+      button.classList.add("incorrect");
+    }
+  });
+  if(isCorrect){
+    score++;
+    scoreSpan.textContent = score;
+  }
 }
 
 function restartQuiz(){
