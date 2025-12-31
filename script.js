@@ -111,7 +111,15 @@ function showQuestion(){
         
         // Dataset=Its a property of the button element that allows you to store custom data
         button.dataset.correct = answer.correct
+
+        button.addEventListener("click",selectAnswer)
+
+        answersContainer.appendChild(button);
     })
+}
+
+function selectAnswer(event){
+  
 }
 
 function restartQuiz(){
