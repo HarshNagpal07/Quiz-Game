@@ -143,7 +143,9 @@ function selectAnswer(event){
     currentQuestionIndex++;
     //Check if there are more quesition or if the quiz is over
     if(currentQuestionIndex < quizQuestions.length){
-
+      showQuestion()
+    }else{
+      showResults()
     }
   },1000)
 }
