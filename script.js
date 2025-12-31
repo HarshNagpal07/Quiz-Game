@@ -149,6 +149,9 @@ function selectAnswer(event){
     }
   },1000)
 }
+function showResults(){
+  
+}
 
 function restartQuiz(){
     console.log("quiz re-started")
