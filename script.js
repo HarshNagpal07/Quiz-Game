@@ -151,7 +151,6 @@ function selectAnswer(event){
 }
 function showResults(){
   
-  
 }
 
 function restartQuiz(){
