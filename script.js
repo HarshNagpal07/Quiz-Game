@@ -171,5 +171,8 @@ function showResults(){
 }
 
 function restartQuiz(){
-    console.log("quiz re-started")
+    // console.log("quiz re-started")
+    resultScreen.classList.remove("active");
+
+    startQuiz();
 }
