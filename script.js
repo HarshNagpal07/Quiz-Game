@@ -120,9 +120,9 @@ function showQuestion(){
 
 function selectAnswer(event){
   //optimization check
-  if(answersDisabled) return 
+  if(answersDisabled) return;
 
-  answersContainer =true;
+  answersDisabled =true;
 
   const selectedButton = event.target;
   const isCorrect = selectedButton.dataset.correct === "true";
@@ -131,7 +131,7 @@ function selectAnswer(event){
     if(button.dataset.correct === "true"){
       button.classList.add("correct")
       button.classList.add("correct")
-    } else{
+    } else if(button === selectedButton){
       button.classList.add("incorrect");
     }
   });
